@@ -26,7 +26,14 @@ namespace AutoyaFramework.AppManifest
             resourceInfos = new AssetBundleListInfo[]{
                new AssetBundleListInfo
                {
-                   listIdentity = "main_aaaaassets",
+                   listIdentity = "unitychan_prefabs",
+                   listVersion = "1.0.0",
+                   //ここにアップロードしたアセットバンドルのURLを書いておく
+                   listDownloadUrl = "http://izm.totheist.net/AssetbundleDemo/"
+               },
+               new AssetBundleListInfo
+               {
+                   listIdentity = "main_assets",
                    listVersion = "1.0.0",
                    listDownloadUrl = "https://raw.githubusercontent.com/sassembla/Autoya/master/AssetBundles"
                },
