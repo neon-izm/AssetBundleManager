@@ -307,6 +307,11 @@ namespace AutoyaFramework
         {
             // load stored assetBundleList then return it.
             var filePaths = Autoya.Persist_FileNamesInDomain(AssetBundlesSettings.ASSETBUNDLES_LIST_STORED_DOMAIN);
+            foreach (var item in filePaths)
+            {
+                Debug.Log(item);
+            }
+            
             return filePaths.Select(
                 path => JsonUtility.FromJson<AssetBundleList>(
                     Autoya.Persist_Load(

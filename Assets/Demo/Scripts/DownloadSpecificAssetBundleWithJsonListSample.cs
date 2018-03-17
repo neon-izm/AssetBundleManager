@@ -117,62 +117,62 @@ public class DownloadSpecificAssetBundleWithJsonListSample : MonoBehaviour
             10 // 10 parallel download! you can set more than 0.
         );
 
-        var preloadListPath_std = "unity_chan_std.json";
-        // this will become ASSETBUNDLES_URL_DOWNLOAD_PRELOADLIST + sample.preloadList.json.
+        //var preloadListPath_std = "unity_chan_std.json";
+        //// this will become ASSETBUNDLES_URL_DOWNLOAD_PRELOADLIST + sample.preloadList.json.
 
 
-        // download preloadList from web then preload described assetBundles.
-        Autoya.AssetBundle_Preload(
-            preloadListPath_std,
-            (willLoadBundleNames, proceed, cancel) =>
-            {
-                var totalWeight = Autoya.AssetBundle_GetAssetBundlesWeight(willLoadBundleNames);
-                Debug.Log(preloadListPath_std+ ":------will loading---------" + totalWeight + " byte");
-                foreach (var item in willLoadBundleNames)
-                {
-                    Debug.Log(item);
-                }
-                Debug.Log("------end------");
-                proceed();
-            },
-            progress =>
-            {
-                Debug.Log("progress:" + progress);
-            },
-            () =>
-            {
-                Debug.Log("preloading all listed assetBundles is finished.");
+        //// download preloadList from web then preload described assetBundles.
+        //Autoya.AssetBundle_Preload(
+        //    preloadListPath_std,
+        //    (willLoadBundleNames, proceed, cancel) =>
+        //    {
+        //        var totalWeight = Autoya.AssetBundle_GetAssetBundlesWeight(willLoadBundleNames);
+        //        Debug.Log(preloadListPath_std+ ":------will loading---------" + totalWeight + " byte");
+        //        foreach (var item in willLoadBundleNames)
+        //        {
+        //            Debug.Log(item);
+        //        }
+        //        Debug.Log("------end------");
+        //        proceed();
+        //    },
+        //    progress =>
+        //    {
+        //        Debug.Log("progress:" + progress);
+        //    },
+        //    () =>
+        //    {
+        //        Debug.Log("preloading all listed assetBundles is finished.");
                 
-                // then, you can use these assetBundles immediately. without any downloading.
-                Autoya.AssetBundle_LoadAsset<GameObject>(
-                    "Assets/Demo/____ASSET_BUNDLES/unitychan_std/Prefabs/UnityChan_Std.prefab",
-                    (assetName, prefab) =>
-                    {
-                        Debug.Log("asset:" + assetName + " is successfully loaded as:" + prefab);
+        //        // then, you can use these assetBundles immediately. without any downloading.
+        //        Autoya.AssetBundle_LoadAsset<GameObject>(
+        //            "Assets/Demo/____ASSET_BUNDLES/unitychan_std/Prefabs/UnityChan_Std.prefab",
+        //            (assetName, prefab) =>
+        //            {
+        //                Debug.Log("asset:" + assetName + " is successfully loaded as:" + prefab);
 
-                        // instantiate asset.
-                        Instantiate(prefab);
-                    },
-                    (assetName, err, reason, status) =>
-                    {
-                        Debug.LogError("failed to load assetName:" + assetName + " err:" + err + " reason:" + reason);
-                    }
-                );
+        //                // instantiate asset.
+        //                Instantiate(prefab);
+        //            },
+        //            (assetName, err, reason, status) =>
+        //            {
+        //                Debug.LogError("failed to load assetName:" + assetName + " err:" + err + " reason:" + reason);
+        //            }
+        //        );
                 
 
                
 
-            },
-            (code, reason, autoyaStatus) =>
-            {
-                Debug.LogError("preload failed. code:" + code + " reason:" + reason);
-            },
-            (downloadFailedAssetBundleName, code, reason, autoyaStatus) =>
-            {
-                Debug.LogError("failed to preload assetBundle:" + downloadFailedAssetBundleName + ". code:" + code + " reason:" + reason);
-            },
-            10 // 10 parallel download! you can set more than 0.
-        );
+        //    },
+        //    (code, reason, autoyaStatus) =>
+        //    {
+        //        Debug.LogError("preload failed. code:" + code + " reason:" + reason);
+        //    },
+        //    (downloadFailedAssetBundleName, code, reason, autoyaStatus) =>
+        //    {
+        //        Debug.LogError("failed to preload assetBundle:" + downloadFailedAssetBundleName + ". code:" + code + " reason:" + reason);
+        //    },
+        //    10 // 10 parallel download! you can set more than 0.
+        //);
     }
 
     void OnApplicationQuit()
