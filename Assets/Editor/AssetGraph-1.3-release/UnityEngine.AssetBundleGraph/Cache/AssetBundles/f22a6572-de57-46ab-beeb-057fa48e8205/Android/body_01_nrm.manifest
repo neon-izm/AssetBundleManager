@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 953378545
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1570b11f4ec3e3c845e07f48a144b707
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4cd0a5558493b0679e071c141fc729a3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_crs/Models/Textures/body_01_NRM.tga
+Dependencies: []

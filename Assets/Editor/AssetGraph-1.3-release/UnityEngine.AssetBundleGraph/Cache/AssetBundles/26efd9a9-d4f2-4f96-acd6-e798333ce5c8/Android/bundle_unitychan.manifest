@@ -1,0 +1,37 @@
+ManifestFileVersion: 0
+CRC: 1153342579
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 005f2a31cec90aa56ebaf121d6f2ce2b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 04ec6d13fa093c65de1bd077ceabd1cc
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_std/Models/unitychan.fbx
+Dependencies:
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_skin1

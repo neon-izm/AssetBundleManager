@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 74601145
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 95d0a1e3e4c0319175ebb4b92a185bfb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 109
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_baseassets/Shader/CharaMain.cg
+Dependencies: []

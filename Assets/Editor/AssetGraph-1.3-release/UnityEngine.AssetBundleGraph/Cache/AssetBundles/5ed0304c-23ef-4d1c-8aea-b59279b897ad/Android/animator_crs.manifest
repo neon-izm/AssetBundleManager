@@ -1,0 +1,20 @@
+ManifestFileVersion: 0
+CRC: 2832161916
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c5a36af0589b2393174d6891c3924822
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: b4c5a82347ebdfc04693c9733c20268d
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_baseassets/Animators/Animator_Crs.controller
+Dependencies:
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/5ed0304c-23ef-4d1c-8aea-b59279b897ad/Android/wait00
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/5ed0304c-23ef-4d1c-8aea-b59279b897ad/Android/win00

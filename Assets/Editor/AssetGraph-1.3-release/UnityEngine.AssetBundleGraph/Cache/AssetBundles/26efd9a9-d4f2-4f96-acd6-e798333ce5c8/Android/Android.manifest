@@ -1,0 +1,185 @@
+ManifestFileVersion: 0
+CRC: 2947606921
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: bundle_body
+      Dependencies:
+        Dependency_0: bundle_env2
+        Dependency_1: bundle_fo_cloth1
+        Dependency_2: bundle_body_00
+        Dependency_3: bundle_body_00_nrm
+        Dependency_4: bundle_body_00_spec
+    Info_1:
+      Name: bundle_eyebase
+      Dependencies:
+        Dependency_0: bundle_eyeline_00
+        Dependency_1: bundle_fo_skin1
+    Info_2:
+      Name: bundle_eyeline
+      Dependencies:
+        Dependency_0: bundle_eyeline_00
+        Dependency_1: bundle_fo_skin1
+    Info_3:
+      Name: bundle_eye_l1
+      Dependencies:
+        Dependency_0: bundle_eye_iris_l_00
+        Dependency_1: bundle_fo_skin1
+    Info_4:
+      Name: bundle_eye_r1
+      Dependencies:
+        Dependency_0: bundle_eye_iris_r_00
+        Dependency_1: bundle_fo_skin1
+    Info_5:
+      Name: bundle_face
+      Dependencies:
+        Dependency_0: bundle_face_00
+        Dependency_1: bundle_fo_skin1
+    Info_6:
+      Name: bundle_hair
+      Dependencies:
+        Dependency_0: bundle_env2
+        Dependency_1: bundle_fo_cloth1
+        Dependency_2: bundle_hair_01
+        Dependency_3: bundle_hair_01_nrm
+        Dependency_4: bundle_hair_01_spec
+    Info_7:
+      Name: bundle_left
+      Dependencies: {}
+    Info_8:
+      Name: bundle_mat_cheek
+      Dependencies:
+        Dependency_0: bundle_cheek_00
+        Dependency_1: bundle_fo_skin1
+    Info_9:
+      Name: bundle_right
+      Dependencies: {}
+    Info_10:
+      Name: bundle_skin1
+      Dependencies:
+        Dependency_0: bundle_skin_01
+    Info_11:
+      Name: bundle_body_01
+      Dependencies: {}
+    Info_12:
+      Name: bundle_body_01_nrm
+      Dependencies: {}
+    Info_13:
+      Name: bundle_body_01_spec
+      Dependencies: {}
+    Info_14:
+      Name: bundle_cheek_00
+      Dependencies: {}
+    Info_15:
+      Name: bundle_default_normal
+      Dependencies: {}
+    Info_16:
+      Name: bundle_env2
+      Dependencies: {}
+    Info_17:
+      Name: bundle_eyeline_00
+      Dependencies: {}
+    Info_18:
+      Name: bundle_eye_iris_l_00
+      Dependencies: {}
+    Info_19:
+      Name: bundle_eye_iris_r_00
+      Dependencies: {}
+    Info_20:
+      Name: bundle_face_00
+      Dependencies: {}
+    Info_21:
+      Name: bundle_fo_cloth1
+      Dependencies: {}
+    Info_22:
+      Name: bundle_fo_rim1
+      Dependencies: {}
+    Info_23:
+      Name: bundle_fo_skin1
+      Dependencies: {}
+    Info_24:
+      Name: bundle_guide
+      Dependencies: {}
+    Info_25:
+      Name: bundle_hair_01
+      Dependencies: {}
+    Info_26:
+      Name: bundle_hair_01_nrm
+      Dependencies: {}
+    Info_27:
+      Name: bundle_hair_01_spec
+      Dependencies: {}
+    Info_28:
+      Name: bundle_skin_01
+      Dependencies: {}
+    Info_29:
+      Name: bundle_unitychan
+      Dependencies:
+        Dependency_0: bundle_skin1
+    Info_30:
+      Name: bundle_unitychan_std
+      Dependencies:
+        Dependency_0: bundle_skin1
+        Dependency_1: bundle_unitychan
+    Info_31:
+      Name: bundle_body_trans
+      Dependencies:
+        Dependency_0: bundle_body_01_nrm
+        Dependency_1: bundle_env2
+        Dependency_2: bundle_fo_cloth1
+        Dependency_3: bundle_body_00
+        Dependency_4: bundle_body_00_spec
+    Info_32:
+      Name: bundle_effector
+      Dependencies:
+        Dependency_0: bundle_body_01
+        Dependency_1: bundle_body_01_nrm
+        Dependency_2: bundle_body_01_spec
+        Dependency_3: bundle_env2
+        Dependency_4: bundle_fo_cloth1
+    Info_33:
+      Name: bundle_skin
+      Dependencies:
+        Dependency_0: bundle_fo_skin1
+        Dependency_1: bundle_skin_00
+    Info_34:
+      Name: bundle_body_00
+      Dependencies: {}
+    Info_35:
+      Name: bundle_body_00_nrm
+      Dependencies: {}
+    Info_36:
+      Name: bundle_body_00_spec
+      Dependencies: {}
+    Info_37:
+      Name: bundle_skin_00
+      Dependencies: {}
+    Info_38:
+      Name: bundle_candyrockstar
+      Dependencies:
+        Dependency_0: bundle_body
+        Dependency_1: bundle_eyebase
+        Dependency_2: bundle_eyeline
+        Dependency_3: bundle_eye_l1
+        Dependency_4: bundle_eye_r1
+        Dependency_5: bundle_face
+        Dependency_6: bundle_hair
+        Dependency_7: bundle_mat_cheek
+        Dependency_8: bundle_body_trans
+        Dependency_9: bundle_effector
+        Dependency_10: bundle_skin
+    Info_39:
+      Name: bundle_unitychan_crs
+      Dependencies:
+        Dependency_0: bundle_body
+        Dependency_1: bundle_eyebase
+        Dependency_2: bundle_eyeline
+        Dependency_3: bundle_eye_l1
+        Dependency_4: bundle_eye_r1
+        Dependency_5: bundle_face
+        Dependency_6: bundle_hair
+        Dependency_7: bundle_mat_cheek
+        Dependency_8: bundle_body_trans
+        Dependency_9: bundle_effector
+        Dependency_10: bundle_skin
+        Dependency_11: bundle_candyrockstar

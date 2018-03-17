@@ -1,0 +1,58 @@
+ManifestFileVersion: 0
+CRC: 2866625602
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 23ebc550fe7ab2938b5ac300c8c5f31c
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 7783d066085dc9d80203123041c70d39
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 0a6149a22cf8a47a192a60b00b3becb3, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 37b7c58dc2d739b4c90fe59f6875debf, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 6514ba86f976d724ab63844a6015b2aa, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: a38e39ada51aaba4db6d352ce218849e, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fcb73b690c023734fb267911061a15c6, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_crs/Prefabs/UnityChan_Crs.prefab
+Dependencies: []

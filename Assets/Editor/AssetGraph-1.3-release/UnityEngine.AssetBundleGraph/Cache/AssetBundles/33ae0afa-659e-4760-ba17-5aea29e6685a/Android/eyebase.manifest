@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 2415481568
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: f1a7eb08becc73dd200ef86c95197679
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cc983a3149e5fb03ce027e70c7a1a559
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_crs/Models/Materials/eyebase.mat
+Dependencies:
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/33ae0afa-659e-4760-ba17-5aea29e6685a/Android/eyeline_00
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/33ae0afa-659e-4760-ba17-5aea29e6685a/Android/fo_skin1

@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3235433199
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cd67d1d69d4478f97f36cf384d6c9e69
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4cd0a5558493b0679e071c141fc729a3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_crs/Models/Textures/hair_01_NRM.tga
+Dependencies: []

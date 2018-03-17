@@ -1,0 +1,25 @@
+ManifestFileVersion: 0
+CRC: 3320627141
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 116a1c35c4befa743db29bce5f1e3f09
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cc983a3149e5fb03ce027e70c7a1a559
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_crs/Models/Materials/hair.mat
+Dependencies:
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/5ed0304c-23ef-4d1c-8aea-b59279b897ad/Android/env2
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/5ed0304c-23ef-4d1c-8aea-b59279b897ad/Android/fo_cloth1
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/5ed0304c-23ef-4d1c-8aea-b59279b897ad/Android/hair_01
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/5ed0304c-23ef-4d1c-8aea-b59279b897ad/Android/hair_01_nrm
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/5ed0304c-23ef-4d1c-8aea-b59279b897ad/Android/hair_01_spec

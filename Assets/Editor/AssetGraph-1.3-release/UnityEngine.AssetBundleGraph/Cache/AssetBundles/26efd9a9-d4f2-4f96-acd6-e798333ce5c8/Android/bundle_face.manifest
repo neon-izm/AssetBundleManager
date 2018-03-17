@@ -1,0 +1,22 @@
+ManifestFileVersion: 0
+CRC: 646753388
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a91e612a47d14260cc306b12d7412fc3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cc983a3149e5fb03ce027e70c7a1a559
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_crs/Models/Materials/face.mat
+Dependencies:
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_face_00
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_fo_skin1

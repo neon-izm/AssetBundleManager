@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1983834925
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 9e764de3f0892958d5c72d3aa7d5c5c2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 109
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_baseassets/Shader/Unlit.cg
+Dependencies: []

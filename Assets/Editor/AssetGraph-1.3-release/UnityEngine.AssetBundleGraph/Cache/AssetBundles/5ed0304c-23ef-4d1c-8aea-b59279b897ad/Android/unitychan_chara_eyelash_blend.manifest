@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3507022355
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3fcb55ed2a7137c4d1c9a19650868b80
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 04f78424ce6b4cd414504523960f5b9b
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_baseassets/Shader/Unitychan_chara_eyelash_blend.shader
+Dependencies: []

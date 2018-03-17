@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 836368618
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5b498baa1f04cd34ab211340ca238178
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_baseassets/Shader/readme.txt
+Dependencies: []
