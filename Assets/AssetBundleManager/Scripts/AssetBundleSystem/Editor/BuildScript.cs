@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEditor;
 using UnityEditor.Callbacks;
 using System;
@@ -71,7 +71,7 @@ public class BuildScript
                 return "/test.exe";
             case BuildTarget.StandaloneOSXIntel:
             case BuildTarget.StandaloneOSXIntel64:
-            case BuildTarget.StandaloneOSX:
+            //case BuildTarget.StandaloneOSX:
                 return "/test.app";
 #if !UNITY_2017_1_OR_NEWER
         case BuildTarget.WebPlayer:

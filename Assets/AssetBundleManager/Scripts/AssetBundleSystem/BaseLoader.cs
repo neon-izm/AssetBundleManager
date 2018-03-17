@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 #if UNITY_EDITOR	
 using UnityEditor;
@@ -73,7 +73,7 @@ public class BaseLoader : MonoBehaviour {
 			return "Windows";
 		case BuildTarget.StandaloneOSXIntel:
 		case BuildTarget.StandaloneOSXIntel64:
-		case BuildTarget.StandaloneOSX:
+		//case BuildTarget.:
 			return "OSX";
 			// Add more build targets for your own.
 			// If you add more targets, don't forget to add the same platforms to GetPlatformFolderForAssetBundles(RuntimePlatform) function.
