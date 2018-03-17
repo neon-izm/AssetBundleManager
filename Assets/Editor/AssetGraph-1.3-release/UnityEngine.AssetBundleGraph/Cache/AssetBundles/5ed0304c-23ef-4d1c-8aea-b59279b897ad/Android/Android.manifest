@@ -1,0 +1,157 @@
+ManifestFileVersion: 0
+CRC: 1771162320
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: unitychan_crs
+      Dependencies:
+        Dependency_0: body
+        Dependency_1: body_trans
+        Dependency_2: effector
+        Dependency_3: eyebase
+        Dependency_4: eyeline
+        Dependency_5: eye_l1
+        Dependency_6: eye_r1
+        Dependency_7: face
+        Dependency_8: hair
+        Dependency_9: mat_cheek
+        Dependency_10: skin
+        Dependency_11: candyrockstar
+    Info_1:
+      Name: body
+      Dependencies:
+        Dependency_0: body_00
+        Dependency_1: body_00_nrm
+        Dependency_2: body_00_spec
+        Dependency_3: env2
+        Dependency_4: fo_cloth1
+    Info_2:
+      Name: body_trans
+      Dependencies:
+        Dependency_0: body_00
+        Dependency_1: body_00_spec
+        Dependency_2: body_01_nrm
+        Dependency_3: env2
+        Dependency_4: fo_cloth1
+    Info_3:
+      Name: effector
+      Dependencies:
+        Dependency_0: body_01
+        Dependency_1: body_01_nrm
+        Dependency_2: body_01_spec
+        Dependency_3: env2
+        Dependency_4: fo_cloth1
+    Info_4:
+      Name: eyebase
+      Dependencies:
+        Dependency_0: eyeline_00
+        Dependency_1: fo_skin1
+    Info_5:
+      Name: eyeline
+      Dependencies:
+        Dependency_0: eyeline_00
+        Dependency_1: fo_skin1
+    Info_6:
+      Name: eye_l1
+      Dependencies:
+        Dependency_0: eye_iris_l_00
+        Dependency_1: fo_skin1
+    Info_7:
+      Name: eye_r1
+      Dependencies:
+        Dependency_0: eye_iris_r_00
+        Dependency_1: fo_skin1
+    Info_8:
+      Name: face
+      Dependencies:
+        Dependency_0: face_00
+        Dependency_1: fo_skin1
+    Info_9:
+      Name: hair
+      Dependencies:
+        Dependency_0: env2
+        Dependency_1: fo_cloth1
+        Dependency_2: hair_01
+        Dependency_3: hair_01_nrm
+        Dependency_4: hair_01_spec
+    Info_10:
+      Name: mat_cheek
+      Dependencies:
+        Dependency_0: cheek_00
+        Dependency_1: fo_skin1
+    Info_11:
+      Name: skin
+      Dependencies:
+        Dependency_0: fo_skin1
+        Dependency_1: skin_00
+    Info_12:
+      Name: body_00
+      Dependencies: {}
+    Info_13:
+      Name: body_00_nrm
+      Dependencies: {}
+    Info_14:
+      Name: body_00_spec
+      Dependencies: {}
+    Info_15:
+      Name: body_01
+      Dependencies: {}
+    Info_16:
+      Name: body_01_nrm
+      Dependencies: {}
+    Info_17:
+      Name: body_01_spec
+      Dependencies: {}
+    Info_18:
+      Name: cheek_00
+      Dependencies: {}
+    Info_19:
+      Name: env2
+      Dependencies: {}
+    Info_20:
+      Name: eyeline_00
+      Dependencies: {}
+    Info_21:
+      Name: eye_iris_l_00
+      Dependencies: {}
+    Info_22:
+      Name: eye_iris_r_00
+      Dependencies: {}
+    Info_23:
+      Name: face_00
+      Dependencies: {}
+    Info_24:
+      Name: fo_cloth1
+      Dependencies: {}
+    Info_25:
+      Name: fo_rim1
+      Dependencies: {}
+    Info_26:
+      Name: fo_skin1
+      Dependencies: {}
+    Info_27:
+      Name: hair_01
+      Dependencies: {}
+    Info_28:
+      Name: hair_01_nrm
+      Dependencies: {}
+    Info_29:
+      Name: hair_01_spec
+      Dependencies: {}
+    Info_30:
+      Name: skin_00
+      Dependencies: {}
+    Info_31:
+      Name: candyrockstar
+      Dependencies:
+        Dependency_0: body
+        Dependency_1: body_trans
+        Dependency_2: effector
+        Dependency_3: eyebase
+        Dependency_4: eyeline
+        Dependency_5: eye_l1
+        Dependency_6: eye_r1
+        Dependency_7: face
+        Dependency_8: hair
+        Dependency_9: mat_cheek
+        Dependency_10: skin

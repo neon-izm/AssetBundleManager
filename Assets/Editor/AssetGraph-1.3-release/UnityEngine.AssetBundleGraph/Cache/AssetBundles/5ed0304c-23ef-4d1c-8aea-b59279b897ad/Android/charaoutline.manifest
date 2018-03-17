@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2469667399
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 1d352e048200d840a99f7e21988fe48b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 109
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_baseassets/Shader/CharaOutline.cg
+Dependencies: []

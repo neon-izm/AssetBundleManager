@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3897470860
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e7e1da9afdc0d5c3fb94ad685035d0a7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 4cd0a5558493b0679e071c141fc729a3
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_crs/Models/Textures/body_00.tga
+Dependencies: []

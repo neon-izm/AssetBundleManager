@@ -1,0 +1,43 @@
+ManifestFileVersion: 0
+CRC: 1463354973
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: ecfdc2be2c881a7e873c023a0ac6b599
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 3628f8cb1af166c1c929ad04edbe694e
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_crs/Models/CandyRockStar.fbx
+Dependencies:
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_body
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_eyebase
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_eyeline
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_eye_l1
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_eye_r1
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_face
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_hair
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_mat_cheek
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_body_trans
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_effector
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_skin

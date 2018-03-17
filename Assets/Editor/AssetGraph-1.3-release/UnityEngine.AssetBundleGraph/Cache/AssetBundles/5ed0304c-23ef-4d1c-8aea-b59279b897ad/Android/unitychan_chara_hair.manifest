@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2236031187
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 21b8a3b4401ce038c848da5d85dbdaf7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 04f78424ce6b4cd414504523960f5b9b
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_baseassets/Shader/Unitychan_chara_hair.shader
+Dependencies: []

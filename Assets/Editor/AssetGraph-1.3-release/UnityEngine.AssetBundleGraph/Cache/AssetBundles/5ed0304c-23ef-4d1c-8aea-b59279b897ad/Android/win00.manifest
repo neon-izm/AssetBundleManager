@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 2120814905
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 66dc5179a6cf10f525e7387a1d19ee03
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 07757d18d3ad222c2010babdc7e451ea
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_baseassets/Animations/WIN00.anim
+Dependencies: []

@@ -1,0 +1,21 @@
+ManifestFileVersion: 0
+CRC: 3435103672
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: cbabcc0782d7a9a4faa4a8b2c19d57bc
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: cc983a3149e5fb03ce027e70c7a1a559
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_std/Models/Materials/skin1.mat
+Dependencies:
+- C:/Users/izm/Documents/UnityProjects/AssetBundleManager/Assets/Editor/AssetGraph-1.3-release/UnityEngine.AssetBundleGraph/Cache/AssetBundles/26efd9a9-d4f2-4f96-acd6-e798333ce5c8/Android/bundle_skin_01

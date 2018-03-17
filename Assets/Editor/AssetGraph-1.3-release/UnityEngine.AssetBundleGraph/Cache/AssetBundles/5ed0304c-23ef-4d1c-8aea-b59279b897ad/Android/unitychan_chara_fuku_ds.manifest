@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3000195831
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: a334def9e08422a8ee0dfcd93dfe5c3a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 04f78424ce6b4cd414504523960f5b9b
+HashAppended: 0
+ClassTypes:
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_baseassets/Shader/Unitychan_chara_fuku_ds.shader
+Dependencies: []

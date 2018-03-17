@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 1084261400
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 79154b03be362627f535d5942d6d3054
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 109
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_baseassets/Shader/CharaSkin.cg
+Dependencies: []

@@ -1,0 +1,16 @@
+ManifestFileVersion: 0
+CRC: 3846037025
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7a2610967f469a05124352a369d4bfcb
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 07757d18d3ad222c2010babdc7e451ea
+HashAppended: 0
+ClassTypes:
+- Class: 74
+  Script: {instanceID: 0}
+Assets:
+- Assets/Demo/____ASSET_BUNDLES/unitychan_baseassets/Animations/WAIT03.anim
+Dependencies: []
