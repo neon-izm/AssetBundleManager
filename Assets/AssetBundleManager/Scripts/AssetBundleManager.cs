@@ -1,4 +1,4 @@
-﻿// =================================
+// =================================
 //
 //  AssetBundleManager.cs
 //	Created by Takuya Himeji
@@ -489,7 +489,7 @@ public class AssetBundleManager : MonoBehaviour
                     Debug.Log(www.error);
                     // wwwを解放する
                     www.Dispose();
-                    throw new Exception("WWW download had an error:" + err);
+                    throw new Exception("WWW download had an error:" + err+" url:"+url);
                 }
                 // ロードしたアセットバンドルをセット
                 AssetBundle bundle = DownloadHandlerAssetBundle.GetContent(www);
