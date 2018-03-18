@@ -5,6 +5,15 @@ using AutoyaFramework;
 using AutoyaFramework.AssetBundles;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+
+/// <summary>
+/// アセットバンドルのキャッシュクリアを行うためだけのシーンで使う
+/// アセットバンドルダウンロード中などは、キャッシュのファイルシステムロックが掛かってしまう。
+/// その為、こういった独立したシーンにしておいて、更にOnDestroyで明示的に呼ぶ、という安全策
+/// 実際に運用するならexpireのタイミングをちゃんと書いたりすると思いますが、たぶんこういうサンプルアプリだと
+/// 同一アセットバンドルのまま、ダウンロードを何回もテストすると思うので…
+/// </summary>
 public class ClearAssetBundleDonwloadedCache : MonoBehaviour {
 
 	// Use this for initialization
@@ -16,7 +25,7 @@ public class ClearAssetBundleDonwloadedCache : MonoBehaviour {
 
     /// <summary>
     /// Caching.ClearCacheがアプリ使用中だとファイルロックされて
-    /// 動かない事が多い(Unity2017.2f3+UnityEditor Windows)ので、OnDestroyで呼ぶ
+    /// 動かない事が多い(Unity2017.2f3+UnityEditor Windows)ので、OnDestroyでキャッシュクリアを呼ぶ
     /// </summary>
     void OnDestroy()
     {

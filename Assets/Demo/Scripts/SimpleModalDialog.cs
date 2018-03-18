@@ -8,7 +8,6 @@ using UnityEngine.UI;
 /// 書き捨てのモーダルダイアログ
 /// あんまりマネしないように…
 /// </summary>
-
 public class SimpleModalDialog : MonoBehaviour {
 
     [SerializeField]
@@ -20,6 +19,9 @@ public class SimpleModalDialog : MonoBehaviour {
     [SerializeField]
     Text message;
 
+    /// <summary>
+    /// イベントを削除しつつhideする
+    /// </summary>
     public void Hide()
     {
         OKbutton.onClick.RemoveAllListeners();
@@ -27,6 +29,7 @@ public class SimpleModalDialog : MonoBehaviour {
         panel.gameObject.SetActive(false);
     }
 
+    //OK,Cancelダイアログを出す
     public void Show(UnityEngine.Events.UnityAction ok, UnityEngine.Events.UnityAction cancel,string dialogMessage = "")
     {
         panel.gameObject.SetActive(true);
@@ -41,7 +44,7 @@ public class SimpleModalDialog : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		if(OKbutton==null || Cancelbutton== null || panel== null)
+		if(OKbutton == null || Cancelbutton == null || panel == null || message == null)
         {
             Debug.LogError("SimpleModalDialogの設定が変。インスペクタ上で確認してください");
             Destroy(this);
