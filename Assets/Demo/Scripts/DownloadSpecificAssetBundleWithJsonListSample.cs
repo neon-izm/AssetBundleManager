@@ -17,6 +17,15 @@ public class DownloadSpecificAssetBundleWithJsonListSample : MonoBehaviour
     SimpleModalDialog Dialog;
 
 
+    //jsonListNameを指定して、
+    //ASSETBUNDLES_URL_DOWNLOAD_PRELOADLIST + jsonListNameのアセットバンドルの名前がずらっと書いてあるリストをインターネット経由で取得する。
+    //その後、取得したjsonの中で指定されたアセットバンドルをpreLoad(つまりダウンロード)する
+    //ユースケースとしては、ステージクリア型のゲームを運用する時に、次のステージ分で使うアセットバンドルをリストとして保持しておいて
+    //都度ダウンロードする、などが考えられます。
+    //このリストを誰が作るんだ、と言われると、誰かが手書きで書く必要があるわけですが…
+    //リストを作るのは面倒くさいので全部ダウンロードしたい、ということなら
+    // https://github.com/sassembla/Autoya/blob/master/Assets/AutoyaSample/2_AssetBundle/PreloadAssetBundle.cs
+    //↑のサンプルが、全部ダウンロードする場合の処理になっています。
     public void DownloadBySpecificJsonListName(string jsonListName="unity_chan_crs.json")
     {
         StartCoroutine(DownloadBySpecificJsonListNameCoroutine(jsonListName));
@@ -25,10 +34,6 @@ public class DownloadSpecificAssetBundleWithJsonListSample : MonoBehaviour
 
     IEnumerator DownloadBySpecificJsonListNameCoroutine(string jsonListName )
     {
-        //jsonListNameを指定して、
-        //ASSETBUNDLES_URL_DOWNLOAD_PRELOADLIST + jsonListNameのリストをインターネット経由で取得する。
-        //その後、取得したjsonの中で指定されたアセットバンドルをpreLoad(つまりダウンロード)する
-
         Autoya.AssetBundle_DownloadAssetBundleListsIfNeed(status => { }, (code, reason, autoyaStatus) => { });
 
         // wait downloading assetBundleList.
@@ -38,19 +43,19 @@ public class DownloadSpecificAssetBundleWithJsonListSample : MonoBehaviour
             yield return null;
         }
 
-        /*
-			get preloadList from web.
-			the base filePath settings is located at AssetBundlesSettings.ASSETBUNDLES_URL_DOWNLOAD_PRELOADLIST.
-
-			this preloadList contains 1 assetBundleName, "bundlename", contains 1 asset, "textureName.png"
-
-			note that:
-				this feature requires the condition:"assetBundleList is stored." for getting assetBundleInfo. (crc, hash, and dependencies.)
-		 */
-
+        
         //使わないけど、インターネット上のフルパスは何か、を表示しておく
         var fullPathForJsonListURL = AutoyaFramework.Settings.AssetBundles.AssetBundlesSettings.ASSETBUNDLES_URL_DOWNLOAD_PRELOADLIST + jsonListName;
         Debug.Log("このURLのjsonに書いてある未キャッシュのアセットバンドルを全部ダウンロードします"+fullPathForJsonListURL);
+        
+        //memo:
+        //この処理で気を付ける点として、fullPathForJsonListURLのURLを直接ブラウザで見てみると、アセットバンドルの「名前だけ」がjsonのリストに含まれています
+        //では個別URLとか、CRCとか、バージョン情報とかは無いのに、なんで名前だけでダウンロード出来てしまうのかと言うと
+        //Autoyaでは既にアセットバンドルをビルドした時の後処理として、これら個別URL,CRCなどの塊をキャッシュで保持してくれる仕組みがあります。
+        //Autoya.AssetBundle_DownloadAssetBundleListsIfNeed(status => { }, (code, reason, autoyaStatus) => { });
+        //↑これがその処理です。内部では色々な事をしていますが、あまり意識しなくてもおまじないとして使えるようになっています。
+        //ただし、気を付ける点としてAutoyaのレールを外れる（例えばアセットバンドルだけを別プロジェクトで運用する、あるいは自前でバージョン処理を書く、設定ファイルの記載を無視して自前で挙動やURLを指定する）
+        //と、一気に考えることが増えます。それはお勧めしません。
 
         // download preloadList from web then preload described assetBundles.
         Autoya.AssetBundle_Preload(
@@ -92,7 +97,6 @@ public class DownloadSpecificAssetBundleWithJsonListSample : MonoBehaviour
                 //Instanciateするとか、実際に使うシーンに遷移するとか
                 //一応今回はメインで使うシーンに遷移、というパターンのデモアプリにしています。
                 Debug.Log("preloading all listed assetBundles is finished.");
-
 
                 //もし、ダウンロード直後にInstanciateしたい、とかなら、以下のように書きます
                 /*
