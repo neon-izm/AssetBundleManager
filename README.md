@@ -9,6 +9,9 @@ Unity向けの各種処理が全部入りされているAutoyaの中でAssetBund
 *DownloadSceneAutoya*でサーバからAssetBundleをダウンロード後、*AssetBundleSceneAutoya*で取得したアセットを表示します。  
 *※サンプルでダウンロードするAssetBundleにユニティちゃんアセットを使用しています。*
 
+![デモシーン](https://raw.githubusercontent.com/neon-izm/AssetBundleManager/master/AssetBundleLoadDemo.gif "サンプルプロジェクトの動作")
+
+
 ## ビルド環境
 Unity 2017.2.0f3  
 Windows 10 
