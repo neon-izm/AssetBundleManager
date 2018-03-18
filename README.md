@@ -31,3 +31,12 @@ Unity2017.2系での利用をお勧めします。
 本リポジトリには、UnityChanがAssetsとして含まれています。 以下のライセンスに従います。
 
 <div><img src="http://unity-chan.com/images/imageLicenseLogo.png" alt="ユニティちゃんライセンス"><p>このアセットは、『<a href="http://unity-chan.com/contents/license_jp/" target="_blank">ユニティちゃんライセンス</a>』で提供されています。このアセットをご利用される場合は、『<a href="http://unity-chan.com/contents/guideline/" target="_blank">キャラクター利用のガイドライン</a>』も併せてご確認ください。</p></div>
+
+## Autoyaのドキュメントについて
+この2個を読む
+- https://sassembla.github.io/Autoya/docs/en/assetbundle0.html
+- https://sassembla.github.io/Autoya/docs/en/resource_generate0.html
+
+あるいはこんな感じの記事も書きました
+
+https://qiita.com/neon-izm/items/27326106738cee2fff69
