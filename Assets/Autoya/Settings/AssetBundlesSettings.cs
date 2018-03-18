@@ -30,7 +30,7 @@ namespace AutoyaFramework.Settings.AssetBundles
 			"OSX";
 #endif
 
-        public const string ASSETBUNDLES_URL_DOWNLOAD_PRELOADLIST = "https://raw.githubusercontent.com/sassembla/Autoya/assetbundle_multi_list_support/AssetBundles/preload/";
+        public const string ASSETBUNDLES_URL_DOWNLOAD_PRELOADLIST = "http://izm.totheist.net/AssetbundleDemo/unitychan_prefabs/preloadList/";
 
 
         public const string ASSETBUNDLES_DOWNLOAD_PREFIX = "assetbundle_";
