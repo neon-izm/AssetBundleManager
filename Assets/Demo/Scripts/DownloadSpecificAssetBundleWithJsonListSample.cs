@@ -127,10 +127,15 @@ public class DownloadSpecificAssetBundleWithJsonListSample : MonoBehaviour
             10 // 10 parallel download! you can set more than 0.
         );
     }
+
+    public void GoToInstanciateScene()
+    {
+        SceneManager.LoadScene("AssetBundleSceneAutoya");
+    }
+
     public void GoToCacheClearScene()
     {
         SceneManager.LoadScene("ClearCacheScene");
     }
-
 
 }

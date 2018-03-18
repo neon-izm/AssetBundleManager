@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Demo/ClearCacheScene.unity
     guid: b2eaebaea674bd642afd37ff26042f88
+  - enabled: 1
+    path: Assets/Demo/AssetBundleSceneAutoya.unity
+    guid: c343e9b67242af940988507ad5f67212
