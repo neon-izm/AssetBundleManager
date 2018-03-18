@@ -5,8 +5,8 @@
 
 #### プロジェクトの概要
 Unity向けの各種処理が全部入りされているAutoyaの中でAssetBundleを利用したサンプルプロジェクトです。  
-*DownloadSceneAutoya*、*AssetBundleSceneAutoya*の2シーン構造です。(ClearCacheSceneはダウンロード済みアセットバンドルの消去に使用しています)
-*DownloadSceneAutoya*でサーバからAssetBundleをダウンロード後、*AssetBundleSceneAutoya*で取得したアセットを表示します。  
+*DownloadSceneAutoya*、*AssetBundleSceneAutoya*の2シーン構造です。(ClearCacheSceneはダウンロード済みアセットバンドルの消去に使用しています)  
+*DownloadSceneAutoya*でサーバからAssetBundleをダウンロード後、*AssetBundleSceneAutoya*で取得したアセットを表示します。 
 *※サンプルでダウンロードするAssetBundleにユニティちゃんアセットを使用しています。*
 
 ![デモシーン](https://raw.githubusercontent.com/neon-izm/AssetBundleManager/master/AssetBundleLoadDemo.gif "サンプルプロジェクトの動作")
