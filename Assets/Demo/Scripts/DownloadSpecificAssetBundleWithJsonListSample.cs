@@ -2,40 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using AutoyaFramework;
-using AutoyaFramework.AssetBundles;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
+/// <summary>
+/// webサイト上にjson形式でダウンロードするアセットバンドルのリストを置いておいて、そのリストにあるアセットバンドルを依存性含めて
+/// ローカルキャッシュに保存するサンプル
+/// </summary>
 public class DownloadSpecificAssetBundleWithJsonListSample : MonoBehaviour
+{
+
+    //ダウンロードして良いか聞く為のダイアログ
+    [SerializeField]
+    SimpleModalDialog Dialog;
+
+
+    public void DownloadBySpecificJsonListName(string jsonListName="unity_chan_crs.json")
     {
+        StartCoroutine(DownloadBySpecificJsonListNameCoroutine(jsonListName));
+    }
 
-        /// <summary>
-        /// テスト用。全アセットバンドルを消去する
-        /// </summary>
-        public void DeleteAllAssetBundleCaches()
+
+    IEnumerator DownloadBySpecificJsonListNameCoroutine(string jsonListName )
+    {
+        //jsonListNameを指定して、
+        //ASSETBUNDLES_URL_DOWNLOAD_PRELOADLIST + jsonListNameのリストをインターネット経由で取得する。
+        //その後、取得したjsonの中で指定されたアセットバンドルをpreLoad(つまりダウンロード)する
+
+        Autoya.AssetBundle_DownloadAssetBundleListsIfNeed(status => { }, (code, reason, autoyaStatus) => { });
+
+        // wait downloading assetBundleList.
+        while (!Autoya.AssetBundle_IsAssetBundleFeatureReady())
         {
 
+            yield return null;
         }
-
-        // 特定のjsonで記述された「アセットバンドル情報をまとめたリスト」をダウンロードするサンプル
-        // 
-        IEnumerator Start()
-        {
-
-            /*
-                this is sample of "preload assetBundles feature".
-                the word "preload" in this sample means "download assetBundles without use."
-                preloaded assetBundles are stored in storage cache. no difference between preloaded and downloaded assetBundles.
-                case2:get preloadList from web, then get described assetBundles.
-             */
-
-            Autoya.AssetBundle_DownloadAssetBundleListsIfNeed(status => { }, (code, reason, autoyaStatus) => { });
-
-            // wait downloading assetBundleList.
-            while (!Autoya.AssetBundle_IsAssetBundleFeatureReady())
-            {
-            
-                yield return null;
-            }
 
         /*
 			get preloadList from web.
@@ -47,49 +48,54 @@ public class DownloadSpecificAssetBundleWithJsonListSample : MonoBehaviour
 				this feature requires the condition:"assetBundleList is stored." for getting assetBundleInfo. (crc, hash, and dependencies.)
 		 */
 
-        var preloadListPath = "unity_chan_crs.json";
-        // this will become ASSETBUNDLES_URL_DOWNLOAD_PRELOADLIST + sample.preloadList.json.
-
+        //使わないけど、インターネット上のフルパスは何か、を表示しておく
+        var fullPathForJsonListURL = AutoyaFramework.Settings.AssetBundles.AssetBundlesSettings.ASSETBUNDLES_URL_DOWNLOAD_PRELOADLIST + jsonListName;
+        Debug.Log("このURLのjsonに書いてある未キャッシュのアセットバンドルを全部ダウンロードします"+fullPathForJsonListURL);
 
         // download preloadList from web then preload described assetBundles.
         Autoya.AssetBundle_Preload(
-            preloadListPath,
+            jsonListName,
             (willLoadBundleNames, proceed, cancel) =>
             {
+                //ここで、（ダウンロード予定のリストは取得した後、アセットバンドルのダウンロードを始める直前の処理を差し込めます
+                //ユースケースとしては「〇〇バイトのダウンロードを行います。よろしいですか？」みたいな感じです。
                 var totalWeight = Autoya.AssetBundle_GetAssetBundlesWeight(willLoadBundleNames);
-                Debug.Log(preloadListPath+ ":------will loading---------"+totalWeight+" byte");
+
+                //もし、ダウンロード済だったらダイアログを出さずにさっさとこの関数を抜けたい。という場合は以下のように書いてください
+                /*
+                if (totalWeight < 1)
+                {
+                    proceed();
+                }
+                */
+                Debug.Log(jsonListName + ":------will loading---------" + totalWeight + " byte");
                 foreach (var item in willLoadBundleNames)
                 {
                     Debug.Log(item);
                 }
+                //ダイアログを出して、ダウンロードして良いか聞く。これは便利…
+                Dialog.Show(new UnityEngine.Events.UnityAction( proceed), new UnityEngine.Events.UnityAction(cancel),totalWeight+"バイトのダウンロードを行います。良いですか");
                 Debug.Log("------end------");
-                proceed();
+                
             },
             progress =>
             {
+                //アセットバンドルのダウンロードが一個終わる度にここが呼び出され、progressの値が0から1に増えていきます。
+                //大変残念ですが、ダウンロードすべきアセットバンドルが1個だけの場合は、このprogressは1だけになります。
+                //なぜかというと1個づつアセットバンドルがダウンロード完了した毎に、Autoyaはprogressのイベントを発火するためです。
+                //こういう小さなデモアプリだと1しか出なくて不便だ…と思われるかもしれませんが、実際の運用では問題ないです。
                 Debug.Log("progress:" + progress);
             },
             () =>
             {
+                //ここでダウンロードが全部終わった、あるいは全部キャッシュ済みだった時の処理を書く
+                //Instanciateするとか、実際に使うシーンに遷移するとか
+                //一応今回はメインで使うシーンに遷移、というパターンのデモアプリにしています。
                 Debug.Log("preloading all listed assetBundles is finished.");
-                /*
-                // then, you can use these assetBundles immediately. without any downloading.
-                Autoya.AssetBundle_LoadAsset<GameObject>(
-                    "Assets/Demo/____ASSET_BUNDLES/unitychan_std/Prefabs/UnityChan_Std.prefab",
-                    (assetName, prefab) =>
-                    {
-                        Debug.Log("asset:" + assetName + " is successfully loaded as:" + prefab);
 
-                        // instantiate asset.
-                        Instantiate(prefab);
-                    },
-                    (assetName, err, reason, status) =>
-                    {
-                        Debug.LogError("failed to load assetName:" + assetName + " err:" + err + " reason:" + reason);
-                    }
-                );
-                */
-                
+
+                //もし、ダウンロード直後にInstanciateしたい、とかなら、以下のように書きます
+                /*
                 Autoya.AssetBundle_LoadAsset<GameObject>(
                    "Assets/Demo/____ASSET_BUNDLES/unitychan_crs/Prefabs/UnityChan_Crs.prefab",
                    (assetName, prefab) =>
@@ -97,14 +103,14 @@ public class DownloadSpecificAssetBundleWithJsonListSample : MonoBehaviour
                        Debug.Log("asset:" + assetName + " is successfully loaded as:" + prefab);
 
                        // instantiate asset.
-                       Instantiate(prefab, new Vector3(1f, 0, 0),Quaternion.identity);
+                       Instantiate(prefab, new Vector3(1f, 0, 0), Quaternion.identity);
                    },
                    (assetName, err, reason, status) =>
                    {
                        Debug.LogError("failed to load assetName:" + assetName + " err:" + err + " reason:" + reason);
                    }
                );
-               
+               */
             },
             (code, reason, autoyaStatus) =>
             {
@@ -116,68 +122,11 @@ public class DownloadSpecificAssetBundleWithJsonListSample : MonoBehaviour
             },
             10 // 10 parallel download! you can set more than 0.
         );
-
-        //var preloadListPath_std = "unity_chan_std.json";
-        //// this will become ASSETBUNDLES_URL_DOWNLOAD_PRELOADLIST + sample.preloadList.json.
-
-
-        //// download preloadList from web then preload described assetBundles.
-        //Autoya.AssetBundle_Preload(
-        //    preloadListPath_std,
-        //    (willLoadBundleNames, proceed, cancel) =>
-        //    {
-        //        var totalWeight = Autoya.AssetBundle_GetAssetBundlesWeight(willLoadBundleNames);
-        //        Debug.Log(preloadListPath_std+ ":------will loading---------" + totalWeight + " byte");
-        //        foreach (var item in willLoadBundleNames)
-        //        {
-        //            Debug.Log(item);
-        //        }
-        //        Debug.Log("------end------");
-        //        proceed();
-        //    },
-        //    progress =>
-        //    {
-        //        Debug.Log("progress:" + progress);
-        //    },
-        //    () =>
-        //    {
-        //        Debug.Log("preloading all listed assetBundles is finished.");
-                
-        //        // then, you can use these assetBundles immediately. without any downloading.
-        //        Autoya.AssetBundle_LoadAsset<GameObject>(
-        //            "Assets/Demo/____ASSET_BUNDLES/unitychan_std/Prefabs/UnityChan_Std.prefab",
-        //            (assetName, prefab) =>
-        //            {
-        //                Debug.Log("asset:" + assetName + " is successfully loaded as:" + prefab);
-
-        //                // instantiate asset.
-        //                Instantiate(prefab);
-        //            },
-        //            (assetName, err, reason, status) =>
-        //            {
-        //                Debug.LogError("failed to load assetName:" + assetName + " err:" + err + " reason:" + reason);
-        //            }
-        //        );
-                
-
-               
-
-        //    },
-        //    (code, reason, autoyaStatus) =>
-        //    {
-        //        Debug.LogError("preload failed. code:" + code + " reason:" + reason);
-        //    },
-        //    (downloadFailedAssetBundleName, code, reason, autoyaStatus) =>
-        //    {
-        //        Debug.LogError("failed to preload assetBundle:" + downloadFailedAssetBundleName + ". code:" + code + " reason:" + reason);
-        //    },
-        //    10 // 10 parallel download! you can set more than 0.
-        //);
     }
-
-    void OnApplicationQuit()
+    public void GoToCacheClearScene()
     {
-        Autoya.AssetBundle_DeleteAllStorageCache();
+        SceneManager.LoadScene("ClearCacheScene");
     }
+
 
 }
